@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name":"Glühwein",
+        "price":"4.5",
+        "pfand": true,
+        "amount":0
+    },
+    {
+        "id": 2,
+        "name":"Punsch",
+        "price":"3.5",
+        "pfand": true,
+        "amount":0
+    },
+    {
+        "id": 3,
+        "name":"Quark 3",
+        "price":"2.5",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 4,
+        "name":"Quark 5",
+        "price":"4",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 5,
+        "name":"Quark 7",
+        "price":"5.5",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 6,
+        "name":"Pfand Zurück",
+        "price":"-4",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 7,
+        "name":"Angebot Gutschrift",
+        "price":"-1",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 8,
+        "name":"Pfand",
+        "price":"4",
+        "pfand": false,
+        "amount":0
+    }
+
+]
