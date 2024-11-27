@@ -9,28 +9,28 @@
     {
         "id": 2,
         "name":"Punsch",
-        "price":"3.5",
+        "price":"4",
         "pfand": true,
         "amount":0
     },
     {
         "id": 3,
-        "name":"Quark 3",
-        "price":"2.5",
+        "name":"Quark 4",
+        "price":"5",
         "pfand": false,
         "amount":0
     },
     {
         "id": 4,
-        "name":"Quark 5",
-        "price":"4",
+        "name":"Quark 6",
+        "price":"7",
         "pfand": false,
         "amount":0
     },
     {
         "id": 5,
-        "name":"Quark 7",
-        "price":"5.5",
+        "name":"Quark 8",
+        "price":"9",
         "pfand": false,
         "amount":0
     },
@@ -52,6 +52,13 @@
         "id": 8,
         "name":"Pfand",
         "price":"4",
+        "pfand": false,
+        "amount":0
+    },
+    {
+        "id": 9,
+        "name":"Schuss",
+        "price":"2",
         "pfand": false,
         "amount":0
     }

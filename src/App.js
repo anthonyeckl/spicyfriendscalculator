@@ -8,6 +8,7 @@ function App() {
 
   const products = [...products_json]
   const [shoppingCart, setShoppingCart] = useState(products)
+  const [markt, setMarkt] = useState("SM")
   
 
   const [sum, setSum] = useState(0)
@@ -36,12 +37,13 @@ function App() {
     setShoppingCart(shoppingCartClone)
     console.log(shoppingCart)
   }
-
+  /*
   const addAngebot = () => {
     //addToShoppingCart([products[0],products[0],products[6],products[3]])
     handler([[products[0], 2], [products[3], 1], [products[6], 1]])
 
   }
+  */
 
   const clearCart = () => {
     var shoppingCartClone = [...shoppingCart]
@@ -52,17 +54,32 @@ function App() {
     setShoppingCart(shoppingCartClone)
   }
 
+  function marktChange(e){
+    setMarkt(e.target.value)
+    if(e.target.value === "SM"){
+      products[5]["price"] = "-4"
+      products[7]["price"] = "4"
+    }else{
+      products[5]["price"] = "-3"
+      products[7]["price"] = "3"
+    }
+  }
+
 
 
   return (
     <div className="App">
+      <select id="standort" defaultValue={markt} onChange={marktChange} className="text-xl w-100">
+        <option value="SM">Striezelmarkt</option>
+        <option value="AM">Augustusmarkt</option>
+      </select>
       <div className="grid grid-cols-3 gap-2">
         <Button1  text="Glühwein" color="bg-red-500" onC={() => {handler([[products[0], 1]])}}></Button1>
         <Button1  text="Punsch" color="bg-blue-500" onC={() => {handler([[products[1], 1]])}}></Button1>
-        <Button1  text="Angebot" color="bg-green-500" onC={addAngebot}></Button1>
-        <Button1  text="Quark 3" color="bg-yellow-500" onC={() => {handler([[products[2], 1]])}}></Button1>
-        <Button1  text="Quark 5" color="bg-yellow-500" onC={() => {handler([[products[3], 1]])}}></Button1>
-        <Button1  text="Quark 7" color="bg-yellow-500" onC={() => {handler([[products[4], 1]])}}></Button1>
+        <Button1  text="Schuss" color="bg-green-500" onC={() => {handler([[products[8], 1]])}}></Button1>
+        <Button1  text="Quark 4" color="bg-yellow-500" onC={() => {handler([[products[2], 1]])}}></Button1>
+        <Button1  text="Quark 6" color="bg-yellow-500" onC={() => {handler([[products[3], 1]])}}></Button1>
+        <Button1  text="Quark 8" color="bg-yellow-500" onC={() => {handler([[products[4], 1]])}}></Button1>
         <Button1  text="Pfand Zurück" color="bg-orange-500" onC={() => {handler([[products[5], 1]])}}></Button1>
         <Button1  text="Pfand" color="bg-slate-400" onC={() => {handler([[products[7], 1]])}}></Button1>
         <Button1  text="Clear" color="bg-red-500" onC={clearCart}></Button1>
